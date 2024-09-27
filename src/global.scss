@@ -1,0 +1,547 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "@ionic/angular/css/normalize.css";
+@import "@ionic/angular/css/structure.css";
+@import "@ionic/angular/css/typography.css";
+@import "@ionic/angular/css/display.css";
+
+/* Optional CSS utils that can be commented out */
+@import "@ionic/angular/css/padding.css";
+@import "@ionic/angular/css/float-elements.css";
+@import "@ionic/angular/css/text-alignment.css";
+@import "@ionic/angular/css/text-transformation.css";
+@import "@ionic/angular/css/flex-utils.css";
+
+/**
+ * Ionic Dark Mode
+ * -----------------------------------------------------
+ * For more info, please see:
+ * https://ionicframework.com/docs/theming/dark-mode
+ */
+
+/* @import "@ionic/angular/css/palettes/dark.always.css"; */
+/* @import "@ionic/angular/css/palettes/dark.class.css"; */
+@import "@ionic/angular/css/palettes/dark.system.css";
+
+
+
+
+
+.native-textarea {
+    padding: 0 !important;
+    height: 100% !important;
+    min-height: 63px !important;
+}
+
+::-webkit-scrollbar {
+    width: 0px !important;
+}
+
+ion-content::-webkit-scrollbar {
+    width: 0px !important;
+}
+
+ion-title {
+    background: white !important;
+}
+
+
+.header-ios ion-toolbar:last-of-type {
+    --border-width: 0;
+}
+
+.item-native {
+    --padding: 0 !important;
+}
+
+ion-item::part(native) {
+    // padding: 0 !important;
+}
+
+ion-item::part(inner) {
+    border-bottom: 0.1px solid #d0d0d0 !important;
+}
+
+
+ion-toolbar {
+    --height: 100%;
+    --min-height: 56px;
+}
+
+
+ion-item {
+    // // --inner-padding-left: 10px !important;
+    // --inner-padding: 0 0 0 15px !important;
+    --border-bottom-width: 0.1px;
+    --border-color: #d0d0d0;
+}
+
+
+// ***********************************************BOOTSTRAP CLASSES*******************************************
+
+
+.width-50px {
+    width: 50px !important;
+}
+
+.width-100 {
+    width: 100% !important;
+}
+
+.height-100 {
+    height: 100% !important;
+}
+
+.height-40px {
+    height: 40px !important;
+}
+
+.min-height-100vh {
+    min-height: 100vh !important;
+}
+
+.min-height-100px {
+    min-height: 100px !important;
+}
+
+.width-auto {
+    width: auto !important;
+}
+
+.height-auto {
+    height: auto !important;
+}
+
+.d-flex {
+    display: flex !important;
+}
+
+.d-block {
+    display: block !important;
+}
+
+.d-grid {
+    display: grid !important;
+}
+
+.d-none {
+    display: none !important;
+}
+
+.align-items-center {
+    align-items: center !important;
+}
+
+.justify-content-center {
+    justify-content: center !important;
+}
+
+.align-items-flex-start {
+    align-items: flex-start !important;
+}
+
+.align-items-flex-end {
+    align-items: flex-end !important;
+}
+
+.justify-content-flex-start {
+    justify-content: flex-start !important;
+}
+
+.justify-content-flex-end {
+    justify-content: flex-end !important;
+}
+
+.justify-content-space-around {
+    justify-content: space-around !important;
+}
+
+.justify-content-space-between {
+    justify-content: space-between !important;
+}
+
+.flex-direction-column {
+    flex-direction: column !important;
+}
+
+.opacity-0 {
+    opacity: 0 !important;
+}
+
+.mt-10 {
+    margin-top: 10px !important;
+}
+
+.ml-50 {
+    margin-left: 50px !important;
+}
+
+.mt-50 {
+    margin-top: 50px !important;
+}
+.mb-50{
+    margin-bottom: 50px !important;  
+}
+.pt-10 {
+    margin-top: 10px !important;
+}
+
+.p {
+    padding: 10px !important;
+}
+
+.p-10 {
+    padding: 10px !important;
+}
+
+.gap-10 {
+    gap: 10px !important;
+}
+
+.gap-20 {
+    gap: 20px !important;
+}
+
+.color-white {
+    color: white !important;
+}
+
+.color-black {
+    color: black !important;
+}
+
+.color-orange {
+    color: #F15350 !important;
+}
+
+.bg-white {
+    background-color: white !important;
+}
+
+.bg-orange {
+    background: #F15350 !important;
+}
+
+.border-none {
+    border: none !important;
+}
+
+.border-bottom-orange {
+    border-bottom: 0.5px solid #F15350 !important;
+}
+.border-left-white {
+    border-left: 1px solid white;
+
+}
+
+.--bg-white {
+    --background: white !important;
+}
+
+.box-shaddow-none {
+    box-shadow: none !important;
+}
+
+.width-100px {
+    width: 100px !important;
+}
+
+.pointer {
+    cursor: pointer !important;
+}
+
+.height-50px {
+    height: 50px !important;
+}
+
+.height-60px {
+    height: 60px !important;
+}
+
+.width-88 {
+    width: 88% !important;
+}
+
+.gap-5 {
+    gap: 5px !important;
+}
+
+.ml-10 {
+    margin-left: 10px !important;
+}
+
+.border-orange {
+    border: 0.5px solid #F15350;
+}
+
+.radius-3 {
+    border-radius: 3px !important;
+}
+
+.p-20 {
+    padding: 20px !important;
+}
+
+.mt-20 {
+    margin-top: 20px !important;
+}
+
+.overflow-X {
+    overflow-x: scroll !important;
+}
+
+.color-red {
+    color: red !important;
+}
+
+.hight-115 {
+    height: 115px !important;
+}
+
+.width-130px {
+    width: 130px !important;
+}
+
+.position-relative {
+    position: relative !important;
+}
+
+.position-fixed {
+    position: fixed !important;
+}
+
+.position-absolute {
+    position: absolute !important;
+}
+
+.z-index-10 {
+    z-index: 10 !important;
+}
+
+.left-28 {
+    left: 28px !important;
+}
+
+.right-28 {
+    right: 28px !important;
+}
+
+.overflow-hidden {
+    overflow: hidden !important;
+}
+
+.overflow {
+    overflow: scroll !important;
+}
+
+.color-grey {
+    color: grey !important;
+}
+
+.radius-50 {
+    border-radius: 50% !important;
+}
+
+.bg-grey {
+    background-color: grey !important;
+}
+
+.border-red {
+    border: 1px solid red !important;
+}
+
+.border-lightgrey {
+    border: 1px solid #e0e0e0 !important;
+}
+
+.color-lightgrey {
+    color: #d0d0d0 !important;
+}
+
+.radius-7 {
+    border-radius: 7px !important;
+}
+
+.light-orange {
+    background: #FFCDCC !important;
+}
+
+.radius-20 {
+    border-radius: 20px !important;
+}
+
+.font-10 {
+    font-size: 10px !important;
+}
+
+.p-5 {
+    padding: 5px !important;
+}
+
+.m-0 {
+    margin: 0 !important;
+}
+
+.border-orange {
+    border: 1px solid #F15350;
+}
+
+.font-12 {
+    font-size: 12px !important;
+}
+
+.bg-dark {
+    background: #4A575D !important;
+}
+
+.flex-wrap {
+    flex-wrap: wrap !important;
+}
+
+.right-0 {
+    right: 0 !important;
+}
+
+.ml-30 {
+    margin-left: 30px !important;
+}
+
+.min-height-40px {
+    min-height: 40px !important;
+}
+
+.p-3 {
+    padding: 3px !important;
+}
+
+.radius-5 {
+    border-radius: 5px !important;
+}
+
+.height-20px {
+    height: 20px !important;
+}
+
+.left-0 {
+    left: 0 !important;
+}
+
+.top-0 {
+    top: 0 !important;
+}
+
+.right-0 {
+    right: 0 !important;
+}
+
+.bg-overlay {
+    background-color: #00000045 !important;
+}
+
+.p-15 {
+    padding: 15px !important;
+}
+
+.top-minus-10 {
+    top: -10px !important;
+}
+
+.overflow-hidden {
+    overflow: hidden !important;
+}
+
+.width-96 {
+    width: 96% !important;
+}
+
+.top-minus-4 {
+    top: -4px !important;
+}
+
+.top-minus-5 {
+    top: -5px !important;
+}
+
+.z-index-11 {
+    z-index: 11 !important;
+}
+
+.font-20 {
+    font-size: 20px !important;
+}
+
+.oulline-none {
+    outline: none !important;
+}
+
+.max-height-30px {
+    max-height: 30px !important;
+}
+
+.pr-20 {
+    padding-right: 20px !important;
+}
+
+.min-height-30px {
+    min-height: 30px !important;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+
+.bottom-minus-10 {
+    bottom: -10px !important;
+}
+
+.paddingstart-10px {
+    -webkit-padding-start: 10px !important;
+}
+
+.underline {
+    text-decoration: underline !important;
+}
+
+.right-20 {
+    right: 20px !important;
+}
+
+.z-index-1000 {
+    z-index: 1000 !important;
+}
+
+.radius-10 {
+    border-radius: 10px !important;
+}
+
+.ml-15 {
+    margin-left: 15px !important;
+}
+
+.p-15 {
+    padding: 15px !important;
+}
+
+.text-align-center {
+    text-align: center !important;
+}

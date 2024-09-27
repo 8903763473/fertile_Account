@@ -1,0 +1,131 @@
+<section>
+    <div class="heading">
+        <h6>Bill Generation</h6>
+        <button>Table Bill</button>
+    </div>
+<div class="grid">
+    <div class="leftside">
+         <h3>Menu Items</h3>
+         <h5>Beverages</h5>
+
+         <div class="list">
+            <button>Lassi</button>
+            <button>Lassi</button>
+            <button>Lassi</button>
+            <button>Lassi</button>
+            <button>Lassi</button>
+            <button>Lassi</button>
+         </div>
+         <h5>Starters</h5>
+         <div class="list">
+            <button>Lassi</button>
+            <button>Lassi</button>
+            <button>Lassi</button>
+            <button>Lassi</button>
+            <button>Lassi</button>
+            <button>Lassi</button>
+         </div>
+         <h5>Main Course</h5>
+         <div class="list">
+            <button>Lassi</button>
+            <button>Lassi</button>
+            <button>Lassi</button>
+            <button>Lassi</button>
+            <button>Lassi</button>
+            <button>Lassi</button>
+         </div>
+
+         <div class="bottom">
+            <div class="vegetarigan">
+                <img src="../../assets/account/radio_button_checked red.png">
+                <h5>Vegetarian</h5>
+            </div>
+            <div class="vegetarigan">
+                <div class="vegetarigan">
+                    <img src="../../assets/account/radio_button_checked.png">
+                    <h5>Non-Vegetarian </h5>
+                </div>
+            </div>
+            <div class="vegetarigan">
+                <div class="vegetarigan">
+                    <img src="../../assets/account/radio_button_checked blue.png">
+                    <h5>Contain Egg </h5>
+                </div>
+            </div>
+            </div>
+    </div>
+
+    <div class="Rightside">
+        <h2>Selected Items</h2>
+        <div
+          class="searchSection width-auto d-flex align-items-center justify-content-center gap-10"
+        >
+          <div
+            class="searchSection-In d-flex align-items-center justify-content-flex-start"
+          >
+            <ion-input placeholder="Search By Item Name" [(ngModel)]="searchText">
+            </ion-input>
+            <i class="bi bi-search color-black pointer font-10"></i>
+          </div>
+          <div
+            class="searchSection-In d-flex align-items-center justify-content-flex-start"
+          >
+            <ion-input placeholder="Short Code"> </ion-input>
+            <i class="bi bi-search color-black pointer font-10"></i>
+          </div>
+        </div>
+        
+        <table class="table table-bordered">
+            <thead class="table-dark">
+              <tr>
+                <th scope="col">Code</th>
+                <th scope="col">Item Name</th>
+                <th scope="col">Qty</th>
+                <th scope="col">Rate</th>
+                <th scope="col">Amount</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row">1</td>
+                <td>John</td>
+                <td>Doe</td>
+                <td>Doe</td>
+                <td>Doe</td>
+                <td><i class="bi bi-x-lg"></i>
+                </td>
+              </tr>
+              <tr>
+                <td scope="row">2</td>
+                <td>Jane</td>
+                <td>Smith</td>
+                <td>Doe</td>
+                <td>Doe</td>
+                <td><i class="bi bi-x-lg"></i></td>
+              </tr>
+              <tr>
+                <td scope="row">3</td>
+                <td>Sam</td>
+                <td>Wilson</td>
+                <td>Doe</td>
+                <td>Doe</td>
+                <td><i class="bi bi-x-lg"></i></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="total">
+            <h4>Items Total</h4>
+            <h4>₹1220.00</h4>
+          </div>
+
+          <div class="btn">
+            <button>Preview Kot</button>
+            <button>Preview Bill</button>
+            <button style="background: #4A575D;">Settle</button>
+          </div>
+    </div>
+</div>
+   
+</section>
