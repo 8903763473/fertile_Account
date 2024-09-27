@@ -4,6 +4,7 @@ import { LoginComponent } from './login/login.component';
 import { BillGenerationComponent } from './bill-generation/bill-generation.component';
 import { TableManagementComponent } from './table-management/table-management.component';
 import { CustomerRegistrationComponent } from './customer-registration/customer-registration.component';
+import { SavedBillComponent } from './saved-bill/saved-bill.component';
 
 const routes: Routes = [
   {
@@ -26,6 +27,9 @@ const routes: Routes = [
   },
   {
     path: 'customerRegistration',component:CustomerRegistrationComponent
+  },
+  {
+    path: 'savedBill',component:SavedBillComponent
   },
 ];
 

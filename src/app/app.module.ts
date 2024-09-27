@@ -12,9 +12,10 @@ import { FormsModule } from '@angular/forms';
 import { TableManagementComponent } from './table-management/table-management.component';
 import { CustomerRegistrationComponent } from './customer-registration/customer-registration.component';
 import { BillGenerationComponent } from './bill-generation/bill-generation.component';
+import { SavedBillComponent } from './saved-bill/saved-bill.component';
 
 @NgModule({
-  declarations: [AppComponent,LoginComponent,TableManagementComponent,CustomerRegistrationComponent,BillGenerationComponent],
+  declarations: [AppComponent,LoginComponent,SavedBillComponent,TableManagementComponent,CustomerRegistrationComponent,BillGenerationComponent],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,HttpClientModule,FormsModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
