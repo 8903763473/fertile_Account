@@ -7,6 +7,24 @@ import { AppComponent } from '../app.component';
   styleUrls: ['./bill-generation.component.scss'],
 })
 export class BillGenerationComponent  implements OnInit {
+// stockItems array in your component
+stockItems = [
+  {
+    code: '123',
+    itemName: 'Panneer Tikka',
+    qty: 1,
+    rate: 250.00,
+    amount: 250.00,
+  },
+  {
+    code: '456',
+    itemName: 'Butter Naan',
+    qty: 2,
+    rate: 50.00,
+    amount: 100.00,
+  },
+  // More items...
+];
 
   constructor(public app:AppComponent) { }
   searchText:any
