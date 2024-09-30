@@ -286,3 +286,160 @@ ion-datetime {
     align-items: flex-start !important;
   }
 }
+
+// ***************************************POPUP*****************************
+
+.billPopup {
+  height: calc(100% - 50px) !important;
+  width: calc(100%);
+  margin-top: 50px !important;
+}
+
+.bill-container {
+  height: 90%;
+  width: 500px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: scroll;
+}
+
+.bill-header {
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+}
+
+.bill-header h1 {
+  color: #f44336;
+  font-size: 1.8em;
+  margin: 0;
+}
+
+.bill-header p {
+  margin: 5px 0;
+  font-size: 0.9em;
+}
+
+.bill-info {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.bill-info p {
+  font-weight: 600;
+}
+
+.bill-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 10px;
+}
+
+.bill-table th,
+.bill-table td {
+  padding: 5px;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+.bill-table th {
+  background-color: #f44336;
+  color: white;
+}
+
+.bill-footer {
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+.bill-summary {
+    width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  padding: 0 10px;
+}
+
+.location-info {
+  font-size: 0.85em;
+  margin: 10px 0;
+}
+
+.bill-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  gap: 15px;
+}
+
+.bill-buttons button {
+  padding: 5px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.print-button {
+  background: #4a575d;
+  width: 116px;
+  color: white;
+}
+
+.download-button {
+  background-color: #f44336;
+  color: white;
+  width: 116px;
+}
+
+.bill-detail {
+  font-family: Inter;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 25.41px;
+  text-align: left;
+  margin: 0;
+}
+
+.bill-title {
+  font-family: Inter;
+  font-size: 37px;
+  font-weight: 600;
+  line-height: 44.78px;
+  text-align: left;
+}
+
+.font-12 {
+  font-size: 12px !important;
+}
+
+.dotted-border {
+  border-bottom: 1px dotted grey !important;
+  height: 40px !important;
+}
+
+.title-summary {
+  height: 30px;
+  background: #ffeded;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.color-lightGrey {
+  color: #5f5f5f !important;
+}
+
+.normalFontStyle {
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24.2px;
+  text-align: left;
+}
+
+.logo {
+  width: 115px !important;
+}

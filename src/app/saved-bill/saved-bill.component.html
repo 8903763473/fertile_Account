@@ -90,7 +90,7 @@
             row.status
           }}</span>
         </td>
-        <td><i class="bi bi-eye pointer color-black"></i></td>
+        <td>View <i class="bi bi-eye pointer color-black" (click)="BillPopup=true"></i></td>
         <td><i class="bi bi-trash3 pointer color-black"></i></td>
       </tbody>
     </table>
@@ -133,6 +133,130 @@
         placeholder="Select Date"
         presentation="month"
       ></ion-datetime>
+    </div>
+  </div>
+
+  <div
+    class="billPopup position-fixed z-index-10 top-0 left-0 d-flex align-items-center justify-content-center bg-overlay" *ngIf="BillPopup"
+  >
+    <div class="bill-container position-relative">
+      <i
+        class="bi bi-x-square position-absolute top-10 right-20 color-black pointer"  (click)="BillPopup=false"
+      ></i>
+      <div class="bill-header">
+        <img src="../../assets/orange_logo.png" alt="" class="logo" />
+        <p class="color-black">Perumalpuram, Tirunelveli</p>
+        <p class="color-black">Pin: 627007</p>
+      </div>
+
+      <div
+        class="bill-info d-flex align-items-center justify-content-center flex-direction-column"
+      >
+        <strong class="Bill-title color-black">* Dine In Bill *</strong>
+        <div
+          class="width-100 d-flex align-items-flex-start justify-content-space-between"
+        >
+          <div>
+            <p class="color-black bill-detail"></p>
+            <p class="color-lightGrey bill-detail">Bill No: 034</p>
+            <p class="color-lightGrey bill-detail">Payment Mode: Cash</p>
+            <p class="color-lightGrey bill-detail">Table No: T5</p>
+          </div>
+          <div>
+            <p class="color-lightGrey bill-detail">Bill Date: 25/06/24</p>
+            <p class="color-lightGrey bill-detail">Bill Time: 11:23:01</p>
+          </div>
+        </div>
+      </div>
+
+      <table class="bill-table">
+        <thead>
+          <tr>
+            <th>Code</th>
+            <th>Item Name</th>
+            <th>Qty</th>
+            <th>Rate</th>
+            <th>Amount</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>0045</td>
+            <td>Paneer Tikka</td>
+            <td>1</td>
+            <td>₹ 250.00</td>
+            <td>₹ 250.00</td>
+          </tr>
+          <tr>
+            <td>0046</td>
+            <td>Chicken Tikka</td>
+            <td>1</td>
+            <td>₹ 300.00</td>
+            <td>₹ 300.00</td>
+          </tr>
+          <tr>
+            <td>0047</td>
+            <td>Egg Biryani</td>
+            <td>1</td>
+            <td>₹ 150.00</td>
+            <td>₹ 150.00</td>
+          </tr>
+          <tr>
+            <td>0048</td>
+            <td>Dal Fry</td>
+            <td>1</td>
+            <td>₹ 100.00</td>
+            <td>₹ 100.00</td>
+          </tr>
+          <tr>
+            <td>0049</td>
+            <td>Butter Naan</td>
+            <td>10</td>
+            <td>₹ 12.00</td>
+            <td>₹ 120.00</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="width-100 d-flex align-items-center justify-content-center flex-direction-column radius-10 border-lightgrey">
+        <div class="bill-summary title-summary">
+          <div class="color-orange font-12 normalFontStyle">Items: 6</div>
+          <div class="color-orange font-12 normalFontStyle">Qty: 14</div>
+        </div>
+
+        <div class="bill-summary">
+          <div class="color-black font-12 normalFontStyle">Cash: 2000.00</div>
+          <div class="color-black font-12 normalFontStyle">
+            SubTotal: 1220.00
+          </div>
+        </div>
+
+        <div class="bill-summary dotted-border">
+          <div class="color-black font-12 normalFontStyle">Change: 780.00</div>
+          <div class="color-black font-12 normalFontStyle">
+            Grand Total: 1220.00
+          </div>
+        </div>
+
+        <div
+          class="location-info width-100 d-flex align-items-center justify-content-space-around"
+        >
+          <p class="color-black font-12 normalFontStyle">
+            Location: Ground Floor
+          </p>
+          <p class="color-black font-12 normalFontStyle">Ambience: AC</p>
+          <p class="color-black font-12 normalFontStyle">Waiter: Rajesh</p>
+        </div>
+      </div>
+
+      <div class="bill-buttons">
+        <button class="print-button">
+          Print <i class="bi bi-printer color-white"></i>
+        </button>
+        <button class="download-button">
+          Download <i class="bi bi-download color-white"></i>
+        </button>
+      </div>
     </div>
   </div>
 </section>

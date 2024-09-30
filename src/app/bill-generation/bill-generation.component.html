@@ -1,259 +1,480 @@
 <section>
   <div class="heading">
-      <h6>Bill Generation</h6>
-      <button>Take Away</button>
+    <h6>Bill Generation</h6>
+    <button>Take Away</button>
   </div>
-<div class="grid">
-  <div class="leftside">
-       <h3>Menu Items</h3>
-       <h5>Beverages</h5>
+  <div class="grid">
+    <div class="leftside">
+      <h3>Menu Items</h3>
+      <h5>Beverages</h5>
 
-       <div class="list">
-          <button>Lassi</button>
-          <button>Lassi</button>
-          <button>Lassi</button>
-          <button>Lassi</button>
-          <button>Lassi</button>
-          <button>Lassi</button>
-       </div>
-       <h5>Starters</h5>
-       <div class="list">
-          <button>Lassi</button>
-          <button>Lassi</button>
-          <button>Lassi</button>
-          <button>Lassi</button>
-          <button>Lassi</button>
-          <button>Lassi</button>
-       </div>
-       <h5>Main Course</h5>
-       <div class="list">
-          <button>Lassi</button>
-          <button>Lassi</button>
-          <button>Lassi</button>
-          <button>Lassi</button>
-          <button>Lassi</button>
-          <button>Lassi</button>
-       </div>
+      <div class="list">
+        <button>Lassi</button>
+        <button>Lassi</button>
+        <button>Lassi</button>
+        <button>Lassi</button>
+        <button>Lassi</button>
+        <button>Lassi</button>
+      </div>
+      <h5>Starters</h5>
+      <div class="list">
+        <button>Lassi</button>
+        <button>Lassi</button>
+        <button>Lassi</button>
+        <button>Lassi</button>
+        <button>Lassi</button>
+        <button>Lassi</button>
+      </div>
+      <h5>Main Course</h5>
+      <div class="list">
+        <button>Lassi</button>
+        <button>Lassi</button>
+        <button>Lassi</button>
+        <button>Lassi</button>
+        <button>Lassi</button>
+        <button>Lassi</button>
+      </div>
 
-       <div class="bottom">
+      <div class="bottom">
+        <div class="vegetarigan">
+          <img src="../../assets/account/radio_button_checked red.png" />
+          <h5>Vegetarian</h5>
+        </div>
+        <div class="vegetarigan">
           <div class="vegetarigan">
-              <img src="../../assets/account/radio_button_checked red.png">
-              <h5>Vegetarian</h5>
+            <img src="../../assets/account/radio_button_checked.png" />
+            <h5>Non-Vegetarian</h5>
           </div>
+        </div>
+        <div class="vegetarigan">
           <div class="vegetarigan">
-              <div class="vegetarigan">
-                  <img src="../../assets/account/radio_button_checked.png">
-                  <h5>Non-Vegetarian </h5>
-              </div>
+            <img src="../../assets/account/radio_button_checked blue.png" />
+            <h5>Contain Egg</h5>
           </div>
-          <div class="vegetarigan">
-              <div class="vegetarigan">
-                  <img src="../../assets/account/radio_button_checked blue.png">
-                  <h5>Contain Egg </h5>
-              </div>
-          </div>
-          </div>
-  </div>
-
-<div class="centerside">
-  <div class="top">
-    <div class="Tableheading">
-      <h5>Select Table-</h5>
-      <h5>A1</h5>
+        </div>
+      </div>
     </div>
-     
+
+    <div class="centerside">
+      <div class="top">
+        <div class="Tableheading">
+          <h5>Select Table-</h5>
+          <h5>A1</h5>
+        </div>
+
         <div
-        class="searchSection width-auto d-flex align-items-center justify-content-center gap-10"
-      >
-        <div
-          class="searchSection-In d-flex align-items-center justify-content-flex-start"
+          class="searchSection width-auto d-flex align-items-center justify-content-center gap-10"
         >
-          <ion-input placeholder="Search By Item Name" [(ngModel)]="searchText">
-          </ion-input>
-          <i class="bi bi-search color-black pointer font-10"></i>
+          <div
+            class="searchSection-In d-flex align-items-center justify-content-flex-start"
+          >
+            <ion-input
+              placeholder="Search By Item Name"
+              [(ngModel)]="searchText"
+            >
+            </ion-input>
+            <i class="bi bi-search color-black pointer font-10"></i>
+          </div>
+          <div
+            class="searchSection-In d-flex align-items-center justify-content-flex-start"
+          >
+            <ion-input placeholder="Search By Item Code"> </ion-input>
+            <i class="bi bi-search color-black pointer font-10"></i>
+          </div>
         </div>
-        <div
-          class="searchSection-In d-flex align-items-center justify-content-flex-start"
-        >
-          <ion-input placeholder="Search By Item Code"> </ion-input>
-          <i class="bi bi-search color-black pointer font-10"></i>
+        <div class="tableData">
+          <table class="items-table mt-10">
+            <thead>
+              <tr>
+                <th>Code</th>
+                <th>Item name</th>
+                <th>Qty</th>
+                <th>Rate</th>
+                <th class="bg-dark-table">Amount</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of stockItems">
+                <td>{{ item?.code }}</td>
+                <td>{{ item?.itemName }}</td>
+                <td>{{ item?.qty | number : "2.0-0" }}</td>
+                <td>{{ item?.rate | number : "1.2-2" }}</td>
+                <td>{{ item?.amount | number : "1.2-2" }}</td>
+                <td><i class="bi bi-x-lg"></i></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="tableTotal">
+          <div class="total">
+            <h3>Item Total</h3>
+            <h3>1220.00</h3>
+          </div>
+        </div>
+
+        <div class="Details">
+          <div class="Entry">
+            <h5>Location</h5>
+            <h5></h5>
+          </div>
+
+          <div class="Entry">
+            <h5>Ambience :</h5>
+            <h5></h5>
+          </div>
+
+          <div class="Entry">
+            <h5>Waiter :</h5>
+            <h5></h5>
+          </div>
         </div>
       </div>
-      <div class="tableData">
-        <table class="items-table mt-10">
-          <thead>
-            <tr>
-              <th>Code</th>
-              <th>Item name</th>
-              <th>Qty</th>
-              <th>Rate</th>
-              <th class="bg-dark-table">Amount</th>
-              <th></th>
-            </tr>
-          </thead>
-          <tbody>
-            <!-- Bind using *ngFor to loop through stockItems array -->
-            <tr *ngFor="let item of stockItems">
-              <td>{{item?.code}}</td>
-              <td>{{item?.itemName}}</td>
-              <td>{{item?.qty | number: '2.0-0'}}</td> <!-- Qty formatted as whole number -->
-              <td>{{item?.rate | number: '1.2-2'}}</td> <!-- Rate formatted to 2 decimal places -->
-              <td>{{item?.amount | number: '1.2-2'}}</td> <!-- Amount formatted to 2 decimal places -->
-              <td><i class="bi bi-x-lg"></i></td> <!-- Delete icon -->
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      
-       
-     
+      <div class="bottom">
+        <h4>Today's Sale</h4>
+        <div class="orderlist">
+          <h5>Food</h5>
+          <h5>3547.00</h5>
+        </div>
+        <div class="orderlist">
+          <h5>Others</h5>
+          <h5>11000.00</h5>
+        </div>
 
-      <!-- <h6>Please select the table from the table list </h6> -->
-      <div class="tableTotal">
-        <div class="total">
-          <h3>Item Total</h3>
-          <h3>1220.00</h3>
+        <div class="dotLine"></div>
+        <div class="orderlist">
+          <h5>Total Sale -</h5>
+          <h5>14000.00</h5>
         </div>
       </div>
-
-      <div class="Details">
-        <div class="Entry">
-          <h5>Location</h5>
-          <h5></h5>
-        </div>
-        
-        <div class="Entry">
-          <h5>Ambience :</h5>
-          <h5></h5>
-        </div>
-
-        <div class="Entry">
-          <h5>Waiter :</h5>
-          <h5></h5>
-        </div>
-
-      </div>
-     
-  </div>
-  <div class="bottom">
- <h4>Today's Sale</h4>
-  <div class="orderlist">
-     <h5>Food</h5>
-     <h5>3547.00</h5>
-  </div>
-  <div class="orderlist">
-    <h5>Others</h5>
-    <h5>11000.00</h5>
- </div>
- 
- <div class="dotLine"></div>
- <div class="orderlist">
-  <h5>Total Sale - </h5>
-  <h5>14000.00</h5>
-</div>
-  </div>
-</div>
-
-<div class="rightside">
-  <div class="Tablelist">
-<h5>Table list</h5>
-<div class="type">
-  <h5>AC</h5>
-</div>
-<div class="TableName">
-  <div class="elipse">
-    <h2>A1</h2>
-  </div>
-  <div class="elipse">
-    <h2>A2</h2>
-  </div>
-  <div class="elipse">
-    <h2>A3</h2>
-  </div>
-  <div class="elipse">
-    <h2>A4</h2>
-  </div>
-  <div class="elipse">
-    <h2>A5</h2>
-  </div>
-  
-
-</div>
-
-<!--  -->
-<div class="type">
-  <h5>Gender</h5>
-</div>
-<div class="TableName">
-  <div class="elipse">
-    <h2>G1</h2>
-  </div>
-  <div class="elipse">
-    <h2>G2</h2>
-  </div>
-  <div class="elipse">
-    <h2>G3</h2>
-  </div>
-  <div class="elipse">
-    <h2>G4</h2>
-  </div>
-  <div class="elipse">
-    <h2>G5</h2>
-  </div>
-  
-
-</div>
-<!--  -->
-<div class="type">
-  <h5>Room Service</h5>
-</div>
-<div class="TableName">
-  <div class="elipse">
-    <h2>R1</h2>
-  </div>
-  <div class="elipse">
-    <h2>R2</h2>
-  </div>
-  <div class="elipse">
-    <h2>R3</h2>
-  </div>
-  <div class="elipse">
-    <h2>R4</h2>
-  </div>
-  <div class="elipse">
-    <h2>R5</h2>
-  </div>
-</div>
-
-
-
-<div class="rectangleLine">
-  <div class="status">
-    <div class="serviceStatus">
-      <img src="../../assets/account/radio_button_checked red.png">
-      <h4>Occupied</h4>
     </div>
-    <div class="serviceStatus">
-      <img src="../../assets/account/radio_button_checked.png">
-      <h4>Available </h4>
+
+    <div class="rightside">
+      <div class="Tablelist">
+        <h5>Table list</h5>
+        <div class="type">
+          <h5>AC</h5>
+        </div>
+        <div class="TableName">
+          <div class="elipse">
+            <h2>A1</h2>
+          </div>
+          <div class="elipse">
+            <h2>A2</h2>
+          </div>
+          <div class="elipse">
+            <h2>A3</h2>
+          </div>
+          <div class="elipse">
+            <h2>A4</h2>
+          </div>
+          <div class="elipse">
+            <h2>A5</h2>
+          </div>
+        </div>
+
+        <!--  -->
+        <div class="type">
+          <h5>Gender</h5>
+        </div>
+        <div class="TableName">
+          <div class="elipse">
+            <h2>G1</h2>
+          </div>
+          <div class="elipse">
+            <h2>G2</h2>
+          </div>
+          <div class="elipse">
+            <h2>G3</h2>
+          </div>
+          <div class="elipse">
+            <h2>G4</h2>
+          </div>
+          <div class="elipse">
+            <h2>G5</h2>
+          </div>
+        </div>
+        <!--  -->
+        <div class="type">
+          <h5>Room Service</h5>
+        </div>
+        <div class="TableName">
+          <div class="elipse">
+            <h2>R1</h2>
+          </div>
+          <div class="elipse">
+            <h2>R2</h2>
+          </div>
+          <div class="elipse">
+            <h2>R3</h2>
+          </div>
+          <div class="elipse">
+            <h2>R4</h2>
+          </div>
+          <div class="elipse">
+            <h2>R5</h2>
+          </div>
+        </div>
+
+        <div class="rectangleLine">
+          <div class="status">
+            <div class="serviceStatus">
+              <img src="../../assets/account/radio_button_checked red.png" />
+              <h4>Occupied</h4>
+            </div>
+            <div class="serviceStatus">
+              <img src="../../assets/account/radio_button_checked.png" />
+              <h4>Available</h4>
+            </div>
+          </div>
+        </div>
+        <div class="buttons">
+          <div class="btn">
+            <button>preview kot</button>
+            <button (click)="BillPopup = true">preview bill</button>
+            <button>shift table</button>
+          </div>
+          <div class="btn">
+            <button style="background: #4a575d">settle</button>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-</div>
-<div class="buttons">
-  <div class="btn">
-    <button>preview kot</button>
-    <button>preview bill</button>
-    <button>shift table</button>
-  </div>
-  <div class="btn">
-    <button style="background: #4A575D;">settle</button>
-  </div>
-</div>
 
+  <div
+    class="billPopup position-fixed z-index-10 top-0 left-0 d-flex align-items-center justify-content-center bg-overlay"
+    *ngIf="BillPopup"
+  >
+    <div class="bill-container position-relative">
+      <i
+        class="bi bi-x-square position-absolute top-10 right-20 color-black pointer"
+        (click)="BillPopup = false"
+      ></i>
 
+      <div class="bill-content">
+        <div class="bill-content-left">
+          <div class="bill-header">
+            <img src="../../assets/orange_logo.png" alt="" class="logo" />
+            <p class="color-black">Perumalpuram, Tirunelveli</p>
+            <p class="color-black">Pin: 627007</p>
+          </div>
 
+          <div
+            class="bill-info d-flex align-items-center justify-content-center flex-direction-column"
+          >
+            <strong class="Bill-title color-black">* Dine In Bill *</strong>
+            <div
+              class="width-100 d-flex align-items-flex-start justify-content-space-between"
+            >
+              <div>
+                <p class="color-black bill-detail"></p>
+                <p class="color-lightGrey bill-detail">Bill No: 034</p>
+                <p class="color-lightGrey bill-detail">Payment Mode: Cash</p>
+                <p class="color-lightGrey bill-detail">Table No: T5</p>
+              </div>
+              <div>
+                <p class="color-lightGrey bill-detail">Bill Date: 25/06/24</p>
+                <p class="color-lightGrey bill-detail">Bill Time: 11:23:01</p>
+              </div>
+            </div>
+          </div>
+
+          <table class="bill-table">
+            <thead>
+              <tr>
+                <th class="tableDataText">Code</th>
+                <th class="tableDataText">Item Name</th>
+                <th class="tableDataText">Qty</th>
+                <th class="tableDataText">Rate</th>
+                <th class="tableDataText">Amount</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="tableDataText">0045</td>
+                <td class="tableDataText">Paneer Tikka</td>
+                <td class="tableDataText">1</td>
+                <td class="tableDataText">250.00</td>
+                <td class="tableDataText">250.00</td>
+              </tr>
+              <tr>
+                <td class="tableDataText">0046</td>
+                <td class="tableDataText">Chicken Tikka</td>
+                <td class="tableDataText">1</td>
+                <td class="tableDataText">300.00</td>
+                <td class="tableDataText">300.00</td>
+              </tr>
+              <tr>
+                <td class="tableDataText">0047</td>
+                <td class="tableDataText">Egg Biryani</td>
+                <td class="tableDataText">1</td>
+                <td class="tableDataText">150.00</td>
+                <td class="tableDataText">150.00</td>
+              </tr>
+              <tr>
+                <td class="tableDataText">0048</td>
+                <td class="tableDataText">Dal Fry</td>
+                <td class="tableDataText">1</td>
+                <td class="tableDataText">100.00</td>
+                <td class="tableDataText">100.00</td>
+              </tr>
+              <tr>
+                <td class="tableDataText">0049</td>
+                <td class="tableDataText">Butter Naan</td>
+                <td class="tableDataText">10</td>
+                <td class="tableDataText">12.00</td>
+                <td class="tableDataText">120.00</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div
+            class="width-100 d-flex align-items-center justify-content-center flex-direction-column radius-10 border-lightgrey"
+          >
+            <div class="bill-summary title-summary">
+              <div class="color-orange font-12 normalFontStyle">Items: 6</div>
+              <div class="color-orange font-12 normalFontStyle">Qty: 14</div>
+            </div>
+
+            <div class="bill-summary">
+              <div class="color-black font-12 normalFontStyle">
+                Cash: 2000.00
+              </div>
+              <div class="color-black font-12 normalFontStyle">
+                SubTotal: 1220.00
+              </div>
+            </div>
+
+            <div class="bill-summary dotted-border">
+              <div class="color-black font-12 normalFontStyle">
+                Change: 780.00
+              </div>
+              <div class="color-black font-12 normalFontStyle">
+                Grand Total: 1220.00
+              </div>
+            </div>
+
+            <div
+              class="location-info width-100 d-flex align-items-center justify-content-space-around"
+            >
+              <p class="color-black font-12 normalFontStyle">
+                Location: Ground Floor
+              </p>
+              <p class="color-black font-12 normalFontStyle">Ambience: AC</p>
+              <p class="color-black font-12 normalFontStyle">Waiter: Rajesh</p>
+            </div>
+          </div>
+
+          <div class="bill-buttons">
+            <button class="print-button">
+              Print <i class="bi bi-printer color-white"></i>
+            </button>
+            <button class="download-button">
+              Download <i class="bi bi-download color-white"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="bill-content-right">
+          <div class="amountDetail flex-direction-column">
+            <span class="amountTitle">Amount Detail</span>
+            <div class="container">
+              <div class="field">
+                <label>Loyalty Point :</label>
+                <input type="text" disabled />
+              </div>
+              <div class="field">
+                <label>Discount :</label>
+                <input type="text" value="0.00%" disabled />
+              </div>
+              <div class="field">
+                <label>Amt. Received :</label>
+                <input type="text" value="2000.00" disabled />
+              </div>
+              <div class="field">
+                <label>Grand Total :</label>
+                <input type="text" value="1220.00" disabled />
+              </div>
+              <div class="field">
+                <label>Sub Total :</label>
+                <input type="text" value="1220.00" disabled />
+              </div>
+              <div class="field">
+                <label>Change :</label>
+                <input type="text" value="780.00" disabled />
+              </div>
+              <div class="field">
+                <label>Parcel Charges :</label>
+                <input type="text" value="780.00" disabled />
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="payment-container">
+              <div
+                class="width-100 d-flex align-items-flex-start justify-content-space-between p-10"
+              >
+                <div class="number-pad">
+                  <button>1</button>
+                  <button>2</button>
+                  <button>3</button>
+                  <button>4</button>
+                  <button>5</button>
+                  <button>6</button>
+                  <button>7</button>
+                  <button>8</button>
+                  <button>9</button>
+                  <button>.</button>
+                  <button>0</button>
+                  <button>*</button>
+                </div>
+
+                <div class="payment-methods">
+                  <button class="payment-btn cash active color-orange">
+                    <span
+                      ><img
+                        src="../../assets/Food/cash.svg"
+                        alt=""
+                        class="white-image"
+                    /></span>
+                    Cash
+                  </button>
+                  <button class="payment-btn card color-orange">
+                    <span
+                      ><img
+                        src="../../assets/Food/credit.svg"
+                        alt=""
+                        class="white-image"
+                    /></span>
+                    Card
+                  </button>
+                  <button class="payment-btn other color-orange">
+                    <span
+                      ><img
+                        src="../../assets/Food/others.svg"
+                        alt=""
+                        class="white-image"
+                    /></span>
+                    Other
+                  </button>
+                </div>
+              </div>
+
+              <div class="action-buttons">
+                <button class="action-btn hold">
+                  Save & Hold <img src="../../assets/hand.png" alt="" />
+                </button>
+                <button class="action-btn print bg-orange">
+                  Save & Print <i class="bi bi-printer color-white"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
-</div>
-   
 </section>

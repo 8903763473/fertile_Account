@@ -11,6 +11,7 @@ export class SavedBillComponent  implements OnInit {
   selectedTab:any;
   searchText:any;
   isDatePicker:boolean=false;
+  BillPopup:boolean=false;
 
   TableData:any = [
     { id: "016", table: "A1", date: "10/20/2050", time: "10:50 pm", customer: "Ramisha", phone: "9876543234", payment: "Cash", amount: "140.00", status: "Paid" },
@@ -24,6 +25,7 @@ export class SavedBillComponent  implements OnInit {
   ngOnInit() {
     this.app.leftSide  = true;
     this.app.topHeader = true;
+    this.BillPopup = false;
     this.selectedTab = 1;
   }
 
